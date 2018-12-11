@@ -16,23 +16,23 @@ import PlaceDetail from './PlaceDetail/PlaceDetail';
 
 import { addPlace, deletePlace, selectPlace, deselectPlace } from '../store/actions/index';
 
-placeAddedHandler = placeName => {
-  this.props.onPlaceAdded(placeName)
-};
-
-placeDeletedHandler = () => {
-  this.props.onDeletedPlace()
-}
-
-modalClosedHandler = () => {
-  this.props.onDeselectPlace();
-}
-
-placeSelectedHandler = key => {
-  this.props.onSelectPlace(key);
-}
-
 class MainScreen extends Component {
+
+  placeAddedHandler = placeName => {
+    this.props.onPlaceAdded(placeName)
+  };
+  
+  placeDeletedHandler = () => {
+    this.props.onDeletedPlace()
+  }
+  
+  modalClosedHandler = () => {
+    this.props.onDeselectPlace();
+  }
+  
+  placeSelectedHandler = key => {
+    this.props.onSelectPlace(key);
+  }
 
   state = {
     places: [],
