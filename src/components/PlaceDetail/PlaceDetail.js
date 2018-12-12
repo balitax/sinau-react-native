@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { Modal, View, StyleSheet, Image } from 'react-native'
-import { Container, Header, Content, Button, Text, Icon } from 'native-base';
+import { Button, Text } from 'native-base';
 
 const PlaceDetail = props => {
+
     let modalContent = null;  
 
     if (props.selectedPlace) {
@@ -19,10 +20,10 @@ const PlaceDetail = props => {
             <View style={styles.containerModal}>
                 {modalContent}
                 <View>
-                    <Button color="red" onPress={props.onItemDeleted}>
+                    <Button style={styles.buttonAction} danger onPress={props.onItemDeleted}>
                         <Text>DELETE</Text>
                     </Button>
-                    <Button onPress={props.onModalClosed}>
+                    <Button style={styles.buttonAction}  primary onPress={props.onModalClosed}>
                         <Text>CLOSE</Text>
                     </Button>
                 </View>
@@ -45,6 +46,11 @@ const styles = StyleSheet.create({
         textAlign: "center",
         fontSize: 28,
         marginTop: 20,
+    },
+    buttonAction: {
+        width: '100%',
+        marginTop: 10,
+        borderRadius: 0,
     }
 })
 

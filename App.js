@@ -9,7 +9,6 @@
 import React, {Component} from 'react';
 import { Container, Icon, Header, Left, Body, Right, Button, Title } from 'native-base';
 import MainScreen from './src/components/MainScreen';
-import { connect } from 'react-redux';
 
 class App extends Component {
   render() {
@@ -36,4 +35,4 @@ class App extends Component {
   }
 }
 
-export default connect(null, null)(App);
+export default App;

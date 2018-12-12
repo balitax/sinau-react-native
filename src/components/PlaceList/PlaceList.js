@@ -6,6 +6,7 @@ import ListItem from '../ListItem/ListItem';
 const PlaceList = props => {
     return (
         <FlatList  
+            keyExtractor={(info, index) => index.toString()}
             style={styles.listContainer}
             data={props.places}
             renderItem={(info) => (
